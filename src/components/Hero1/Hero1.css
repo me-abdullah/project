@@ -1,0 +1,22 @@
+/* Define your custom font, if needed */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.text-dark-blue {
+  color: #0d47a1; /* Dark Blue */
+}
+
+.text-dark-green {
+  color: #2e7d32; /* Dark Green */
+}
+
+.text-yellow {
+  color: #fbc02d; /* Yellow */
+}
+
+.text-red {
+  color: #c62828; /* Red */
+}
+
+.custom-font {
+  font-family: 'Dancing Script', cursive; /* Change to your desired font family */
+}

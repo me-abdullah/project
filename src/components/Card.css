@@ -1,0 +1,110 @@
+ .Card {
+     display: flex;
+     flex-direction: row;
+justify-content: center;
+align-content: center;
+
+background-size: contain;
+background-repeat: no-repeat;
+
+
+     width: 910px;
+     background-color: hsl(240, 5%, 91%);
+     border-radius: 15px;
+     min-height: 510px;
+     -webkit-box-shadow: 0px 17px 34px -1px rgba(0, 0, 0, 0.38);
+     box-shadow: 0px 17px 34px -1px rgba(0, 0, 0, 0.38);
+     ;
+ }
+
+ .Card-left {
+     flex: 50%;
+     height: 100%;
+     
+     
+ }
+
+ .Card-right {
+     flex: 50%;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+     align-items: flex-start;
+     height: auto;
+ }
+
+ .Card-title {
+  
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     font-family: 'Kumbh Sans', sans-serif;
+     font-weight: bold;
+     font-size: 24px;
+     margin-left: 80px;
+     
+ }
+ 
+
+ .Card-body {
+     height: 100%;
+     flex: 80%;
+     display: flex;
+     flex-direction: column;
+     align-items: space-between;
+     justify-content: center;
+ }
+
+ @media only screen and (max-width:1050px) {
+     .Card {
+         flex-direction: column;
+       
+         max-width: 90vw;
+         overflow: visible;
+
+     }
+     .Card-title {
+         text-align: center;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         width: 100%;
+     }
+     .Card-right {
+         flex: 100%;
+     }
+     .Card-left {
+         max-height: 100px;
+         overflow: visible;
+        
+     }
+ }
+ /* Default styles for smaller screens (<= 1050px) */
+
+  
+  /* Media query for screens wider than 1050px */
+  @media screen and (min-width: 1051px) {
+    .Card{
+      background-image: url('../../public/assets/bg.webp');
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: row;
+ justify-content: center;
+ align-content: center;
+ 
+ background-size: contain;
+ background-repeat: no-repeat;
+ 
+ 
+      width: 910px;
+      background-color: hsl(240, 5%, 91%);
+      border-radius: 15px;
+      min-height: 510px;
+      -webkit-box-shadow: 0px 17px 34px -1px rgba(0, 0, 0, 0.38);
+      box-shadow: 0px 17px 34px -1px rgba(0, 0, 0, 0.38);
+      ;
+    }
+  }
+  

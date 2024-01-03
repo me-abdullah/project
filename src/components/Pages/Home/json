@@ -1,0 +1,54 @@
+#include <OBD.h>
+#include <WiFi.h>
+#include <ThingSpeak.h>
+
+const char *ssid = "hello";
+const char *password = "11111111";
+
+const unsigned long channelID = 2263700;
+const char *apiKey = "AF6BIKSOPQGM4P2X";
+
+WiFiClient client;
+
+void setup() {
+  Serial.begin(115200);
+  while (!Serial);
+
+  WiFi.begin(ssid, password);
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+
+  Serial.println("WiFi connected");
+  Serial.println("IP address: ");
+  Serial.println(WiFi.localIP());
+
+  ThingSpeak.begin(client);
+}
+
+void loop() {
+  OBD obd;
+
+  if (!obd.begin()) {
+    Serial.println("Failed to connect to OBD");
+    while (true);
+  }
+
+  int rpm = obd.rpm();
+  int speed = obd.speed();
+  float intakeAirTemp = obd.intakeAirTemp();
+
+  Serial.print("RPM: ");
+  Serial.println(rpm);
+  Serial.print("Speed: ");
+  Serial.println(speed);
+  Serial.print("Intake Air Temp: ");
+  Serial.println(intakeAirTemp);
+
+  ThingSpeak.writeField(channelID, 1, rpm, apiKey);
+  ThingSpeak.writeField(channelID, 2, speed, apiKey);
+  ThingSpeak.writeField(channelID, 3, intakeAirTemp, apiKey);
+
+  delay(10000);
+}

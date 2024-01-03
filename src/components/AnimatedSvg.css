@@ -1,0 +1,114 @@
+ .bgPattern {
+     position: relative;
+     object-fit: contain;
+     min-height: '100%';
+     display: block;
+     pointer-events: none;
+     transition: transform ease-in-out 300ms;
+ }
+
+ .containerImgDownTop {
+     overflow: hidden;
+     min-height: 550px;
+ }
+
+ .illWoman {
+     height: 100%;
+     width: 100%;
+     position: relative;
+     left: -100px;
+     bottom: -100px;
+     transform: scale(.9);
+     object-fit: contain;
+     z-index: 0;
+ }
+
+ .illBox {
+     height: 100%;
+     width: 95%;
+     position: absolute;
+     left: -230px;
+     bottom: -50px;
+     object-fit: contain;
+     z-index: 20;
+     transform: scale(.3)
+ }
+
+ .bgPatternImg {
+     height: 850px;
+     width: 200%;
+     left: -500px;
+     bottom: -50px;
+     position: absolute;
+     object-fit: fill;
+     z-index: 0;
+     overflow: hidden;
+ }
+
+ @media only screen and (max-width:1050px) {
+     .bgPatternImg {
+         overflow: visible;
+         height: 250px;
+         margin: 0;
+         padding: 0;
+         left: 0px;
+         top: -90px;
+         position: absolute;
+         left: 50%;
+         width: 100%;
+         object-fit: fill;
+         transform: translateX(-50%) scale(.6);
+         min-width: 500px;
+         max-width: 500px;
+     }
+     .illWoman {
+         top: -250px;
+         width: 100%;
+         min-width: 340px;
+         width: 100vw;
+         min-width: 100vw;
+         margin: 0;
+         padding: 0;
+         position: absolute;
+         overflow: visible;
+         align-self: center;
+         justify-self: center;
+         left: 50%;
+         transform: translateX(-50%);
+         z-index: 5;
+         max-width: 300px;
+         min-width: 300px;
+     }
+     .containerImgDownTop {
+         overflow: visible;
+     }
+     .illBox {
+         top: -280px;
+         margin-left: 120px;
+         height: 90%;
+         object-fit: contain;
+         transform: scale(.14);
+         overflow: visible;
+     }
+     .bgPattern {
+         overflow: visible;
+         transform: scale(1.4) translatey(30px);
+         margin-top: 60px;
+     }
+ }
+
+ @media only screen and (max-width:800px) {
+     .bgPattern {
+         overflow: visible;
+         transform: scale(1.1);
+         margin-top: 20px;
+     }
+ }
+
+ @media only screen and (max-width:600px) {
+     .bgPattern {
+         overflow: visible;
+         transform: scale(1);
+         margin-top: 0px;
+     }
+ }

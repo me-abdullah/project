@@ -1,0 +1,62 @@
+.Card-item {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-weight: 400;
+    border-bottom: rgb(212, 212, 212) 2px solid;
+    margin-bottom: 20px;
+    margin-right: 10%;
+    height: fit-content;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.Card-question {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    text-align: start;
+}
+
+.Card-answer {
+    overflow: hidden;
+    text-align: start;
+    font-size: 12px;
+    font-weight: 300;
+    width: 90%;
+}
+
+.Card-answer-inner {
+    padding-top: 20px;
+    color: hsl(240, 6%, 50%);
+}
+
+.Card-question-inner {
+    text-align: start;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.iconContainer {
+    padding-right: 20px;
+}
+
+@media only screen and (max-width:1050px) {
+    .Card-item {
+        margin-right: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+        
+        
+    }
+    .Card-answer {
+        width: 80%;
+    }
+  
+}

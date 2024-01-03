@@ -1,0 +1,87 @@
+import React, { useState, useEffect } from "react";
+import Swiper from "swiper";
+import "./style.css"
+const Gallery = () => {
+  const [swiper, setSwiper] = useState(null);
+
+  useEffect(() => {
+ const swiperElement = document.querySelector(".swiper");
+    const swiperOptions = {
+      initialSlide: 1,
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 0,
+        stretch: 0,
+        depth: 100,
+        modifier: 2,
+        slideShadows: true
+      },
+      spaceBetween: 60,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true
+      },
+      mousewheel: {
+        eventsTarged: ".swiper-wrapper", // Add this line
+        releaseOnEdges: false // Add this line
+      }
+    };
+    setSwiper(new Swiper(swiperElement, swiperOptions));
+  }, []);
+ return (
+    <section>
+    <div className="swiper">
+      <div className="swiper-wrapper ">
+        <div className="swiper-slide swiper-slide--one swiper-3d">
+          <span>domestic</span>
+          <div>
+            <h2>Enjoy the exotic of sunny Hawaii</h2>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              Maui, Hawaii
+            </p>
+          </div>
+        </div>
+        <div className="swiper-slide swiper-slide--two">
+          <span>subtropical</span>
+          <div>
+            <h2>The Island of Eternal Spring</h2>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              Lanzarote, Spanien
+            </p>
+          </div>
+        </div>
+  
+        <div className="swiper-slide swiper-slide--three">
+          <span>history</span>
+          <div>
+            <h2>Awesome Eiffel Tower</h2>
+            <p>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+              </svg>
+              Paris, France
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+  
+    </div>
+  </section>
+  );
+}
+
+export default Gallery;
