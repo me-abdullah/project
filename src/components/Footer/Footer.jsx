@@ -1,7 +1,8 @@
 import React from "react";
+
 import ItemsContainer from "./ItemsContainer";
-import SocialIcons from "./SocialIcons";
 import { Icons } from "./Menus";
+import SocialIcons from "./SocialIcons";
 
 const Footer = () => {
   return (
@@ -21,9 +22,9 @@ const Footer = () => {
 
       <div
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10
-      text-center pt-2 text-[#FFC436] text-sm pb-8 bg-[#1A5D1A]"
+      text-center pt-2 text-[#FFC436]  pb-8 bg-[#1A5D1A]"
       >
-        <span>© All Rights Reserved, Hilwa Dairy, Safa Group 2023</span>
+        <a href="https://safaglobal.com/" className="text-[#FFC436] no-underline"> © All Rights Reserved, Hilwa Dairy, Safa Group 2023 </a>
         <span>Terms · Privacy Policy</span>
         <SocialIcons Icons={Icons} />
       </div>

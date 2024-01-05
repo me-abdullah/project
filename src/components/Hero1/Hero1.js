@@ -1,5 +1,4 @@
 import React from 'react';
-import "./Hero1.css"
 import { useState, useEffect } from 'react';
 
 function Hero1() {
